@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+:root{
+    --box-shadow:rgb(26, 24, 24) 0px 10px 5px 0px;
+}
+
+body{
+    border: solid 2px black;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(35, 32, 45);
+}
+
+.timer-heading{
+    font-size: 16px;
+    padding: 30px;
+    margin: 100px auto;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.entire-timer{
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px 0px;
+}
+
+.timer-box{
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height:160px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-box .timer-number{
+    background: hsl(236, 21%, 26%);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+.timer-number .number{
+    font-size: 72px;
+    font-weight: 700;
+    color: hsl(345, 95%, 68%);
+}
+
+.timer-box .timer-label{
+    color: hsl(237, 18%, 59%);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.timer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1;
+    position: relative;
+    top: 250px;
+}
+
+.timer-icons .hover:hover{
+    background-color: hsl(345, 95%, 68%);
+    cursor: pointer;
+}
+
+.hills{
+    width: 100%;
+    height: auto;
+}
+
+
+.hills-footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left:0;
+    overflow: hidden;
+    flex-grow: 2;
+}
+
+@media only screen and (max-width: 750px){
+
+    .timer-heading{
+        font-size: 24px;
+        padding: 30px;
+        margin: 100px auto 30px auto;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+    .timer-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        z-index: 1;
+        position: relative;
+        top: 350px;
+    }
+
+    .entire-timer{
+        display:flex;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        padding: 10px 10px;
+        border: solid white 2px;
+    }
+    .timer-number .number{
+        font-size: 24px;
+    }
+
+    .timer-box .timer-number{
+        background: hsl(236, 21%, 26%);
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+    }
+
+    .hills-footer{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0%;
+        left:0;
+        overflow: hidden;
+        flex:1;
+    }
+
+    .timer-box .timer-label{
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+}
